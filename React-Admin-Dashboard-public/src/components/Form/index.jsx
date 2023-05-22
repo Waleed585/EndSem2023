@@ -3,9 +3,9 @@ import {
   FormControl,
   FormControlLabel,
   FormLabel,
+  Paper,
   Radio,
   RadioGroup,
-  Stack,
   TextField,
   Typography,
 } from "@mui/material";
@@ -21,13 +21,14 @@ export default function Form() {
   return (
     <>
       <Typography variant="h3">Test Specifications</Typography>
-      <Stack
+      <Paper
         sx={{
           padding: "50px",
           bgcolor: "white",
           borderRadius: "12px",
           margin: "10px",
         }}
+				elevation={10}
       >
         <TextField
           fullWidth
@@ -96,7 +97,7 @@ export default function Form() {
         <Button variant="contained" color="warning" onClick={()=> alert("Saving to db")}>
           Save
         </Button>
-      </Stack>
+      </Paper>
     </>
   );
 }
